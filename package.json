@@ -1,0 +1,29 @@
+{
+  "name": "node_tunes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ldougher06/node_tunes.git"
+  },
+  "author": "logan dougher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ldougher06/node_tunes/issues"
+  },
+  "homepage": "https://github.com/ldougher06/node_tunes#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "less-middleware": "^2.0.1",
+    "moment": "^2.10.6",
+    "mongodb": "^2.0.40",
+    "morgan": "^1.6.1"
+  }
+}
