@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %> | Artists</title>
+</head>
+<body>
+  <h1>Submit your music</h1>
+  <a href="/">Cancel</a>
+  <form action="/artist/create" method="POST">
+    Name: <input name="name" type="text" placeholder="Name">
+    Genre: <input name="genre" type="text" placeholder="Genre">
+    Language: <input name="language" type="text" placeholder="Language">
+    Band Members: <input name="qty" type="number" min="1" value="6">
+    Wikipedia: <input name="wiki" type="text" placeholder="Wikipedia">
+    <input type="submit" value="Submit Music">
+  </form>
+</body>
+</html>
+

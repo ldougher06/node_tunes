@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %> | Music Info</title>
+</head>
+<body>
+  <h1>Artist Info</h1>
+  <a href="/">New Artist</a>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Language</th>
+        <th>Band Members</th>
+        <th>Wikipedia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% artists.forEach(function (artist) { %>
+      <tr>
+        <td><%= artist._id %></td>
+        <td><%= artist.name %></td>
+        <td><%= artist.genre %></td>
+        <td><%= artist.language %></td>
+        <td><%= artist.band %></td>
+        <td><%= artist.wikipedia %></td>
+        <td>
+        <form action="/artistIndex/<%= artist._id %>/" method="post">
+          <input type="submit" value="Save">
+        </form>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
