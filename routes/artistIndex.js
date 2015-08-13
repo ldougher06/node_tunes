@@ -17,10 +17,18 @@ router.get('/', function (req, res) {
         wiki: artist.wiki
       }
     });
-    console.log(formattedartists);
+    //console.log(formattedartists);;
     res.render('templates/artistIndex', {artists: formattedartists});
   });
 });
 
+
+router.post('/:id/delete', function (req, res) {
+  console.log(req.url);
+  var collection = global.db.collection('musicInfo');
+  collection.remove({_id: ObjectID(req.params.id)}, function(){
+    res.redirect('/artistIndex');
+  });
+});
 
 module.exports = router;

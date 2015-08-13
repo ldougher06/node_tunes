@@ -24,11 +24,11 @@
         <td><%= artist.name %></td>
         <td><%= artist.genre %></td>
         <td><%= artist.language %></td>
-        <td><%= artist.band %></td>
-        <td><%= artist.wikipedia %></td>
+        <td><%= artist.qty %></td>
+        <td><%= artist.wiki %></td>
         <td>
-        <form action="/artistIndex/<%= artist._id %>/" method="post">
-          <input type="submit" value="Save">
+        <form action="/artistIndex/<%= artist._id %>/delete" method="post">
+          <input type="submit" value="Delete">
         </form>
         </td>
       </tr>
